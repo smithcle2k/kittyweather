@@ -1,0 +1,71 @@
+/* styles.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e4e4e4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.weather-widget {
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.weather-icon {
+    width: 100px; /* Adjust the size of the weather icons */
+    margin: 20px auto;
+}
+
+.location {
+    font-size: 2em;
+    color: #000;
+}
+
+.current-weather {
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 4em;
+    font-weight: bold;
+    color: #000;
+}
+
+.feels-like, .condition {
+    color: #555;
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .weather-widget {
+        width: 95%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .weather-icon {
+        width: 80px; /* Smaller icons for smaller screens */
+    }
+
+    .location {
+        font-size: 1.5em;
+    }
+
+    .temperature {
+        font-size: 3em;
+    }
+}
