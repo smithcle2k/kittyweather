@@ -47,4 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
     rotateCities();
     // Set the interval for city rotation and weather update
     setInterval(rotateCities, 12000);
+
+    setInterval(rotateCities, 12000);
+
+   // New code for playing music
+   const playlist = ['/audio/song1.mp3', '/audio/song2.mp3', '/audio/song3.mp3','/audio/song4.mp3', '/audio/song5.mp3', '/audio/song6.mp3','/audio/song7.mp3', '/audio/song8.mp3', '/audio/song9.mp3','/audio/song10.mp3', '/audio/song11.mp3', '/audio/song12.mp3','/audio/song13.mp3', '/audio/song14.mp3']; // Add your MP3 files here
+   let currentTrackIndex = 0;
+   const musicPlayer = document.getElementById('backgroundMusic');
+   const playMusicButton = document.getElementById('playMusicButton');
+
+   function playTrack(trackIndex) {
+       musicPlayer.src = playlist[trackIndex];
+       musicPlayer.play();
+   }
+
+   playMusicButton.addEventListener('click', function() {
+       playTrack(currentTrackIndex);
+       this.style.display = 'none'; // Optionally hide the button after playing.
+   });
+
+   musicPlayer.addEventListener('ended', function() {
+       currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+       playTrack(currentTrackIndex);
+   });
 });

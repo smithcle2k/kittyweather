@@ -50,6 +50,23 @@ body, html {
     margin: 5px 0;
 }
 
+.music-player {
+    text-align: center;
+    padding: 20px;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    display: none; /* Hide the audio player initially */
+}
+
+button#playMusicButton {
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
     .weather-widget {
         width: 95%;
