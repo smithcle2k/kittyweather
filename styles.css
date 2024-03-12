@@ -3,8 +3,8 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #e4e4e4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f3; /* Softer background color */
 }
 
 .container {
@@ -17,54 +17,34 @@ body, html {
 .weather-widget {
     width: 80%;
     max-width: 500px;
-    background-color: white;
+    background-color: #ffffff; /* Pure white for simplicity */
     margin: 20px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1); /* Softer shadow */
     text-align: center;
 }
 
 .weather-icon {
-    width: 100px; /* Adjust the size of the weather icons */
-    margin: 20px auto;
+    width: 80px; /* Adjust size for a more minimal look */
+    margin: 10px auto;
+}
+
+.location, .temperature, .feels-like, .condition {
+    color: #555; /* Softer text color */
 }
 
 .location {
-    font-size: 2em;
-    color: #000;
-}
-
-.current-weather {
-    margin-bottom: 20px;
+    font-size: 1.75em; /* Adjusted for a more elegant look */
 }
 
 .temperature {
-    font-size: 4em;
-    font-weight: bold;
-    color: #000;
+    font-size: 3.5em;
+    font-weight: normal; /* Less bold for a softer look */
 }
 
 .feels-like, .condition {
-    color: #555;
     margin: 5px 0;
-}
-
-.music-player {
-    text-align: center;
-    padding: 20px;
-}
-
-audio {
-    width: 100%;
-    max-width: 400px; /* Adjust as needed */
-    display: none; /* Hide the audio player initially */
-}
-
-button#playMusicButton {
-    font-size: 16px;
-    padding: 8px 16px;
-    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -75,7 +55,7 @@ button#playMusicButton {
     }
 
     .weather-icon {
-        width: 80px; /* Smaller icons for smaller screens */
+        width: 60px;
     }
 
     .location {
